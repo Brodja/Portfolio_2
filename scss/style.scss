@@ -101,6 +101,9 @@ body {
         right: 55px;
         width: 80%;
         height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .nav {
             ul {
                 display: flex;
@@ -114,19 +117,27 @@ body {
                         font-size: 15px;
                         font-weight: 600;
                         text-transform: uppercase;
+                        padding: 13px 45px;
                     }
                 }
             }
         }
-
+        .nav ul li a:hover {
+            color: #ffffff;
+            background-color: #754ef9;
+            border-radius: 30px;
+        }
+        .right__content__box {
+            display: flex;
+            align-items: center;
+        }
         .content-left {
-            width: 80%;
+            width: 90%;
             margin-top: 25%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            float: left;
         }
         .title {
             font-family: "Trebuchet MS";
@@ -176,16 +187,18 @@ body {
             letter-spacing: 0.25px;
         }
         .content__right {
-            height: 80%;
+            height: 70%;
+            width: 50px;
             float: right;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-right: -50px;
-            margin-top: 70px;
+            justify-content: space-between;
+            margin-bottom: -90px;
 
             .fol__me {
-                height: 130px;
+                height: 50px;
+                width: 160px;
                 display: flex;
                 align-items: center;
                 color: #754ef9;
@@ -194,20 +207,18 @@ body {
                 font-weight: 600;
                 text-transform: uppercase;
                 transform: rotate(90deg);
-                margin-right: -5px;
             }
             .line {
-                height: 120px;
-                display: flex;
-                align-items: center;
-                transform: rotate(90deg);
+                width: 50px;
+                height: 90px;
+                background: url(../images/Line_1.svg) no-repeat;
+                background-position: 45% 80%;
+                background-size: 1px;
             }
-            hr {
-                width: 70px;
-                color: #754ef9;
-            }
+
             .icon {
-                height: 50px;
+                height: 30px;
+                cursor: pointer;
             }
         }
         .my__intro {
@@ -232,6 +243,7 @@ body {
             align-items: center;
             justify-content: center;
             margin-top: -25px;
+            cursor: pointer;
         }
     }
 }
@@ -304,7 +316,7 @@ body {
     font-weight: 300;
     line-height: 22px;
 }
-.card-button {
+.card__button {
     /* Style for button" */
     width: 120px;
     height: 32px;
@@ -313,11 +325,12 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    .card-button-text {
+    .card__button-text {
         color: #ffffff;
         font-family: Roboto;
         font-size: 11px;
         font-weight: 400;
+        cursor: pointer;
     }
 }
 .portfolio {
@@ -414,14 +427,14 @@ body {
 }
 .btn__full__view-text {
     /* Style for "Full view" */
-width: 44px;
-height: 24px;
-color: #f3f3f3;
-font-family: "Open Sans";
-font-size: 11px;
-font-weight: 400;
-line-height: 24px;
-margin-right: 10px;
+    width: 44px;
+    height: 24px;
+    color: #f3f3f3;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 10px;
 }
 .btn__full__view-icon {
     width: 25px;
@@ -438,7 +451,170 @@ margin-right: 10px;
     background-color: #754ef9;
     opacity: 0.96;
 }
-.portfolio-item:hover .portfolio__item__info{
-        z-index: 2;
+.portfolio-item:hover .portfolio__item__info {
+    z-index: 2;
+}
+.slider__box {
+    width: 820px * 100% /1366px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    .slider-title {
+        width: 353px;
+        color: #202020;
+        font-family: "Open Sans";
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 40px auto 23px;
+    }
+    .slider-subtitle {
+        width: 213px;
+        opacity: 0.5;
+        color: #202020;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 auto 58px;
     }
 
+    .slid__box {
+        width: 820px;
+        height: 436px;
+        // border: 1px solid red;
+        position: relative;
+    }
+    .slid__background {
+        width: 100%;
+        height: 322px;
+        background-color: #754ef9;
+        position: absolute;
+        top: 57px;
+        
+    }
+    .slider {
+        width: 94%;
+        height: 500px;
+        margin: 0 auto 0;
+        z-index: 3;
+        position: relative;
+        padding-top: 35px;
+    }
+    .slider__item{
+        width: 100%;
+        height: 363px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        margin: 5px 0 10px;
+
+    }
+  
+
+  
+    .slid__list {
+        min-width: 0;
+        width: 100%;
+        height: 363px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slid__list-avatar {
+        min-width: 0;
+        width: 10vw;
+        height: 10vw;
+        background-color: #baa7fc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .backgroud__avatar-2 {
+            min-width: 0;
+            width: 80%;
+            height: 80%;
+            background-color: #987bfa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            .avatar {
+                min-width: 0;
+                width: 80%;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+            .avatar img {
+                max-width: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+    .slid__list-tittle {
+        /* Style for "Jhon Wick," */
+        width: 179px;
+        height: 26px;
+        color: #202020;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 28px;
+    }
+    .slid__list-text {
+        /* Style for "Writing pa" */
+        width: 595px;
+        height: 67px;
+        opacity: 0.5;
+        color: #202020;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.14px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+.slick-track{
+    display: flex;
+}
+.slider__item {
+    height: 363px;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.slick-dots {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li {
+    list-style: none;
+    margin: 0px 6px;
+}
+.slick-dots li button {
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    background-color: #754ef9;
+    opacity: 0.15;
+    border-radius: 50%;
+}
+.slick-dots li.slick-active button{
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+}
+.slick-list {
+    overflow: hidden;
+}
