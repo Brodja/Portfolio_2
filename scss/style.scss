@@ -743,6 +743,19 @@ footer {
     .cards {
         width: 80%;
     }
+    .portfolio__item__info {
+        justify-content: space-between;
+        padding: 15px;
+        .portfolio__item__info-title {
+            height: 20%;
+       
+        }
+        .portfolio__item__info-text {
+            width: 98%;
+            height: 80%;
+            overflow: hidden;
+        }
+    }
 }
 @media (max-width: 1110px) {
     .start__right {
@@ -763,7 +776,7 @@ footer {
                     float: none;
                     flex-direction: row;
                     width: 80%;
-                    margin-top: 20%;
+                    margin-top: 0%;
                     .fol__me {
                         transform: rotate(0);
                     }
@@ -787,6 +800,16 @@ footer {
     }
 }
 @media (max-width: 850px) {
+    .start__right {
+        .right__content {
+            .right__content__box {
+                margin-top: 0%;
+                .content__right {
+                    display: none;
+                }
+            }
+        }
+    }
     .cards {
         .card-item {
             width: 270px;
@@ -794,6 +817,15 @@ footer {
     }
 }
 @media (max-width: 769px) {
+    .start__right {
+        .right__content {
+            .right__content__box {
+                .content__right {
+                    display: flex;
+                }
+            }
+        }
+    }
     .portfolio {
         .portfolio-contanier {
             .portfolio-row {
@@ -1011,8 +1043,6 @@ footer {
         .right__content {
             height: 80%;
             .right__content__box {
-                .content-left {
-                }
                 .content__right {
                     width: 100%;
                     .fol__me {
@@ -1074,6 +1104,9 @@ footer {
         .slider-title {
             width: 260px;
             font-size: 25px;
+        }
+        .slid__list{
+            overflow: hidden;
         }
     }
 }
